@@ -1,0 +1,14 @@
+<launch>
+	<group ns = "xb3_left">	
+		<node  pkg="image_proc" type="image_proc" name="image_proc_left"/>
+	</group> 
+
+	<group ns = "xb3_center">	
+		<node  pkg="image_proc" type="image_proc" name="image_proc_center"/>
+	</group> 
+
+	<group ns = "xb3_right">	
+		<node  pkg="image_proc" type="image_proc" name="image_proc_right"/>
+	</group> 
+
+</launch>

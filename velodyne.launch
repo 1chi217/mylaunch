@@ -1,0 +1,7 @@
+<launch>
+	<include file="$(find velodyne_pointcloud)/launch/32e_points.launch">
+		<arg name="calibration" value="/home/pioneer/32db.yaml"/>
+	</include>
+</launch>
+
+

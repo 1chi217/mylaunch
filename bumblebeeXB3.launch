@@ -1,0 +1,16 @@
+<launch>
+	<node pkg="camera1394" type="camera1394_node" name="camera1394_node1">
+		<param name="guid" value="00b09d0100b85670"/>
+		<!--param name="video_mode" value="1280x960_mono8"/--> 
+		<param name="video_mode" value="format7_mode3"/> 
+		<param name="format7_color_coding" value="rgb8"/> 
+		<param name="iso_speed" value="400"/>
+		<param name="frame_rate" value="7.5"/>
+		<param name="bayer_pattern" value="gbrg"/>
+		<param name="bayer_method" value=""/>
+	</node>
+	
+	<group ns="xb3">
+	<node pkg="image_deinterlacer_xb3" type="image_deinterlacer_xb3" name="image_deinterlacer_xb3"/>
+	</group>
+</launch>

@@ -1,0 +1,16 @@
+<launch>
+
+	<node pkg="image_view" type="image_view" name="image_view_left">
+		<remap from="image" to="xb3_left/image_color"/>
+	</node>
+
+	<node pkg="image_view" type="image_view" name="image_view_center">
+		<remap from="image" to="xb3_center/image_color"/>
+	</node>
+
+	<node pkg="image_view" type="image_view" name="image_view_right">
+		<remap from="image" to="xb3_right/image_color"/>
+	</node>
+
+
+</launch>

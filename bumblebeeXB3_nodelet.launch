@@ -1,0 +1,22 @@
+<launch>
+
+	<!-- nodelet manager process -->
+  	<node pkg="nodelet" type="nodelet" name="camera_nodelet_manager" args="manager" />
+
+ 	 <!-- camera driver nodelet -->
+ 	 <node pkg="nodelet" type="nodelet" name="camera1394_nodelet" 
+		args="load camera1394/driver camera_nodelet_manager" >
+		<param name="guid" value="00b09d0100b85670"/>
+		<!--param name="video_mode" value="1280x960_mono8"/--> 
+		<param name="video_mode" value="format7_mode3"/> 
+		<param name="format7_color_coding" value="rgb8"/> 
+		<param name="iso_speed" value="400"/>
+		<!--param name="frame_rate" value="7.5"/-->
+	</node>
+
+	<node pkg="nodelet" type="nodelet" name="nodelet_class" 
+		args="load package_name/nodelet_class camera_nodelet_manager" 
+		output="screen">
+  	</node>    
+
+</launch>
