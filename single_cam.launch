@@ -1,0 +1,17 @@
+<launch>
+	<node pkg="camera1394" type="camera1394_node" name="camera1394_node1">
+		<param name="guid" value="00b09d0100b85670"/>
+		<param name="video_mode" value="1280x960_mono8"/> 
+		<param name="iso_speed" value="400"/>
+		<param name="frame_rate" value="7.5"/>
+		<param name="bayer_pattern" value="gbrg"/>
+		<param name="bayer_method" value=""/>
+		<param name="pan" value="1"/>
+	</node>
+
+        <group ns = "camera">
+                <node  pkg="image_proc" type="image_proc" name="image_proc_right"/>
+        </group>
+
+	
+</launch>
