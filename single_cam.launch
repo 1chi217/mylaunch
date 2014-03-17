@@ -7,10 +7,12 @@
 		<param name="bayer_pattern" value="gbrg"/>
 		<param name="bayer_method" value=""/>
 		<param name="pan" value="1"/>
+		<param name="camera_info_url" 
+			value="file://$(find mylaunch)/cal_center.yaml"/>
 	</node>
 
         <group ns = "camera">
-                <node  pkg="image_proc" type="image_proc" name="image_proc_right"/>
+                <node  pkg="image_proc" type="image_proc" name="image_proc_single"/>
         </group>
 
 	
