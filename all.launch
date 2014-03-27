@@ -1,0 +1,6 @@
+<launch>
+	<include file="$(find mylaunch)/teleop.launch"/>
+	<include file="$(find mylaunch)/velodyne.launch"/>
+	<include file="$(find mylaunch)/single_cam.launch"/>
+	<include file="$(find mylaunch)/pioneer_tf.launch"/>
+</launch>

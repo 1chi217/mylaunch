@@ -2,6 +2,11 @@
 	<include file="$(find velodyne_pointcloud)/launch/32e_points.launch">
 		<arg name="calibration" value="/home/pioneer/32db.yaml"/>
 	</include>
+
+	<node pkg="velodyne_pointcloud" type="transform_node" name="transform_node">
+		<param name="calibration" value="/home/pioneer/32db.yaml"/>
+		<param name="frame_id" value="map"/>
+	</node>
 </launch>
 
 

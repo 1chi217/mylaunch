@@ -1,0 +1,6 @@
+<launch>
+        <include file="$(find ps3_teleop)/ps3_teleop.launch"/>
+
+	<node pkg="rosaria" type="RosAria" name="RosAria" output="screen"/>
+
+</launch>
